@@ -17,7 +17,7 @@ if str(device_lib.list_local_devices()).__contains__('GPU'):
     # gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)
     cuda_cores = 768  # GTX 1050 Ti
     config = tf.ConfigProto(device_count={'GPU': 1, 'CPU': cuda_cores})
-    sess = tf.Session(config=config)
+    sess = tf.Session()
     keras.backend.set_session(sess)
 
 
